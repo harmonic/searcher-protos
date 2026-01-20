@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package searcher;
+
+import "bundle.proto";
+
+message SendBundleRequest {
+  bundle.Bundle bundle = 1;
+}
+
+message SendBundleResponse {
+  // Server-generated UUID for the bundle
+  string uuid = 1;
+}
+
+service SearcherService {
+  // Submit a bundle for inclusion in a block
+  rpc SendBundle(SendBundleRequest) returns (SendBundleResponse) {}
+}

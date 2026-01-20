@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package bundle;
+
+import "packet.proto";
+import "shared.proto";
+
+// A bundle of transactions to be executed atomically
+message Bundle {
+  shared.Header header = 2;
+  repeated packet.Packet packets = 3;
+}
