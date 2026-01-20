@@ -5,15 +5,13 @@ package auth;
 import "google/protobuf/timestamp.proto";
 
 enum Role {
-  RELAYER = 0;
-  SEARCHER = 1;
-  VALIDATOR = 2;
-  SHREDSTREAM_SUBSCRIBER = 3;
+  ROLE_UNSPECIFIED = 0;
+  SEARCHER = 3;
 }
 
 message GenerateAuthChallengeRequest {
   // Role the client is attempting to generate tokens for.
-  // For searchers, use Role.SEARCHER (1)
+  // Use Role.SEARCHER (3)
   Role role = 1;
 
   // Client's 32 byte pubkey
