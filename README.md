@@ -2,6 +2,8 @@
 
 Protobuf definitions for searchers to submit bundles.
 
+> **Important:** The `Role.SEARCHER` enum value is `3` in this repo, unlike Jito protos where `SEARCHER = 1`. Make sure to use `Role.SEARCHER` (not a hardcoded value) to avoid compatibility issues.
+
 ## Proto Files
 
 - `auth.proto` - Authentication service for obtaining access tokens
