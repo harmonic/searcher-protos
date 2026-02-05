@@ -36,7 +36,7 @@ This repo includes a Rust crate that compiles all protos:
 
 ```toml
 [dependencies]
-harmonic_protos = { path = "searcher_protos" }
+harmonic_protos = { git = "https://github.com/harmonic/searcher-protos.git" }
 ```
 
 ## Authentication
