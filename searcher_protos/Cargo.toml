@@ -1,0 +1,15 @@
+[package]
+name = "harmonic_searcher_protos"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+bytes = "1"
+prost = "0.14"
+prost-types = "0.14"
+tonic = "0.14"
+tonic-prost = "0.14"
+
+[build-dependencies]
+tonic-prost-build = "0.14"

@@ -30,6 +30,15 @@ tonic_build::configure()
     .compile(&["proto/auth.proto", "proto/searcher.proto"], &["proto"])?;
 ```
 
+## Rust Crate
+
+This repo includes a Rust crate that compiles all protos:
+
+```toml
+[dependencies]
+harmonic_searcher_protos = { path = "searcher_protos" }
+```
+
 ## Authentication
 
 1. Call `AuthService.GenerateAuthChallenge` with `Role.SEARCHER` (3) and your pubkey
