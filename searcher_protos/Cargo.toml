@@ -1,5 +1,5 @@
 [package]
-name = "harmonic_searcher_protos"
+name = "harmonic_protos"
 version = "0.1.0"
 edition = "2021"
 publish = false
