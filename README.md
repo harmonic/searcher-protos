@@ -7,7 +7,7 @@ Protobuf definitions for searchers to submit bundles.
 ## Proto Files
 
 - `auth.proto` - Authentication service for obtaining access tokens
-- `searcher.proto` - Searcher service for submitting bundles
+- `searcher.proto` - Searcher services for submitting bundles
 - `bundle.proto` - Bundle message definition
 - `packet.proto` - Packet and metadata definitions
 - `shared.proto` - Shared header types
@@ -44,3 +44,7 @@ tonic_build::configure()
 2. Create a `Bundle` with transactions as `Packet` messages
 3. Call `SearcherService.SendBundle`
 4. Receive a UUID for tracking
+
+### Public Submission
+
+`BundleService.SendBundle` takes the same request and response without authentication.

@@ -17,3 +17,8 @@ service SearcherService {
   // Submit a bundle for inclusion in a block
   rpc SendBundle(SendBundleRequest) returns (SendBundleResponse) {}
 }
+
+// Unauthenticated bundle submission.
+service BundleService {
+  rpc SendBundle(SendBundleRequest) returns (SendBundleResponse) {}
+}
